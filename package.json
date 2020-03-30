@@ -1,0 +1,23 @@
+{
+  "name": "rxjs-recipes",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lucasbfernandes/rxjs-recipes.git"
+  },
+  "author": "Lucas Borges Fernandes",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lucasbfernandes/rxjs-recipes/issues"
+  },
+  "homepage": "https://github.com/lucasbfernandes/rxjs-recipes#readme",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "rxios": "^1.1.2",
+    "rxjs": "^6.5.4",
+    "rxjs-compat": "^6.5.4"
+  }
+}
