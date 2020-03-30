@@ -4,8 +4,8 @@ const { throwError, of } = require('rxjs')
 
 const http = new Rxios()
 
-const MAXIMUM_ATTEMPTS = 3
-const MILLISECONDS_DELAY = 2000
+const MAXIMUM_ATTEMPTS = 5
+const MILLISECONDS_DELAY = 1000
 
 const getErrorRetryPipe = (error, attempts) => {
     return of(error).pipe(
@@ -14,7 +14,7 @@ const getErrorRetryPipe = (error, attempts) => {
     )
 }
 
-const getErrorRetryCondition =  error => error.pipe(
+const getErrorRetryCondition = error => error.pipe(
     concatMap((error, attempts) => {
         return attempts >= MAXIMUM_ATTEMPTS ?
             throwError('Reached maximum attemps.') :
